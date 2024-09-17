@@ -27,7 +27,7 @@ public class ProdutoService {
     public Produto save(Produto produto) throws Exception{
         if (Objects.isNull(produto.getNome()) || Objects.isNull(produto.getPreco()))
             throw new ProductNullException();
-        if (produto.getPreco() < 0)
+        if (produto.getPreco() <= 0)
             throw new ProductPriceException();
         return produtoRepository.save(produto);
     }
