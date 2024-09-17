@@ -16,10 +16,7 @@ public class Produto {
     private Double preco;
     private String descricao;
 
-    public Produto () {}
-
-    public Produto(Long id, String nome, Double preco, String descricao) {
-        this.id = id;
+    public Produto(String nome, Double preco, String descricao) {
         this.nome = nome;
         this.preco = preco;
         this.descricao = descricao;
