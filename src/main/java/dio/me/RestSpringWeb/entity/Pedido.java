@@ -22,10 +22,11 @@ public class Pedido {
     @Fetch(FetchMode.SELECT)
     private Set<Produto> produtos;
 
-    public Pedido(String endereco, LocalDateTime dataPedido, String status) {
+    public Pedido(String endereco, LocalDateTime dataPedido, String status, Set<Produto> produtos) {
         this.endereco = endereco;
         this.dataPedido = dataPedido;
         this.status = status;
+        this.produtos = produtos;
     }
 
     public Long getId() {
